@@ -1,0 +1,10 @@
+<h1>All restaurants</h1>
+<ul>
+<% @restaurants.each do |restaurant| %>
+<div class="py-3">
+  <li><%= link_to restaurant.name, restaurant_path(restaurant) %> - <em><%=restaurant.category%></em>
+  <%= link_to "See details or add review", restaurant_path(restaurant), class: "btn btn-success"%>
+  </li>
+  </div>
+<% end %>
+</ul>
